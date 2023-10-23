@@ -16,19 +16,18 @@
         <span>Số n3:</span>
         <input id="number_n3" type="number"><br>
     </div>
-    <div id="result" style="color: red; margin: 5px; font-weight: bolder;"></div>
     <div id="">
-        <button id="btn-action-1" type="button">Kiểm tra</button>
+        <button id="btn-action-5" type="button">Kiểm tra</button>
     </div>
+    <div id="result"></div>
     <script>
-    let bntAction = document.getElementById("btn-action-1");
+    let bntAction = document.getElementById("btn-action-5");
         bntAction.addEventListener("click", () => {
             let inputN1 = parseFloat(document.getElementById("number_n1").value);
             let inputN2 = parseFloat(document.getElementById("number_n2").value);
             let inputN3 = parseFloat(document.getElementById("number_n3").value);
-            let note = `Số lớn nhất trong 3 số (${inputN1} ,  ${inputN2} , ${inputN3}) là: `;
+            let note = `Số lớn nhất trong 3 số (${inputN1} , ${inputN2} , ${inputN3}) là: `;
             let result;
-        if(!isNaN(inputN1) && !isNaN(inputN2) && !isNaN(inputN3)){
             if(inputN1 >= inputN2 && inputN1 >= inputN3){
                 result = inputN1;
             } else if(inputN2 >= inputN1 && inputN2 >= inputN3){
@@ -37,10 +36,7 @@
                 result = inputN3;
             }
             document.getElementById("result").innerHTML = note + result;
-        } else{
-            result = alert("Vui lòng nhập hợp lệ!");
-        }
-    })
+        })
     </script>
 </body>
 </html>

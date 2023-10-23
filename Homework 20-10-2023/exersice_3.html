@@ -13,21 +13,21 @@
         <input id="number_n" type="number">
     </div>
     <div id="">
-        <button id="btn-action-1" type="button">Kiểm tra</button>
+        <button id="btn-action-3" type="button">Kiểm tra</button>
     </div>
     <script>
-    let bntAction = document.getElementById("btn-action-1");
+    let bntAction = document.getElementById("btn-action-3");
         bntAction.addEventListener("click", () => {
-            let inputA = parseFloat(document.getElementById("number_n").value);
-            let valueA = Math.abs(inputA);
-            let result;
-            if(!isNaN(inputA)){
-                result = `Gía trị tuyệt đối ${inputA} là: ${valueA}`
+            let inputN = parseFloat(document.getElementById("number_n").value);
+            if(inputN >= 0){
+                result = `Giá trị tuyệt đối ${inputN} là: ${inputN}`;
             } else {
-                result = "Vui lòng nhập hợp lệ!";
+                result = `Giá trị tuyệt đối ${inputN} là: ${-inputN}`;
             }
+     
             alert(result);
     })
+            
     </script>
 </body>
 </html>
